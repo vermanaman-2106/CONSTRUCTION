@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Engineer's & Builder's</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="pages.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2><a href="index.html" style="text-decoration: none; color: #D97742;">Engineer's & Builder's</a></h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Services</h1>
+            <p>Comprehensive construction and design solutions tailored to your needs</p>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="services-overview">
+        <div class="container">
+            <div class="overview-content">
+                <h2>What We Offer</h2>
+                <p>From initial concept to final construction, we provide end-to-end services that transform your vision into reality. Our team of experienced professionals combines creativity with technical expertise to deliver exceptional results.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="services-grid-section">
+        <div class="container">
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2016&q=80" alt="Interior Design">
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3>Interior Design</h3>
+                        <p>Transform your space with our innovative interior design solutions. We create functional, beautiful, and personalized environments that reflect your style and enhance your lifestyle.</p>
+                        <ul class="service-features">
+                            <li>Space planning and layout design</li>
+                            <li>Color scheme and material selection</li>
+                            <li>Furniture and decor consultation</li>
+                            <li>3D visualization and renderings</li>
+                        </ul>
+                        <button class="btn btn-primary" onclick="openQuoteForm()">Get Quote</button>
+                        <button class="btn btn-secondary learn-more" data-service="interior-design">Learn More</button>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Renovation">
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-hammer"></i>
+                        </div>
+                        <h3>Renovation</h3>
+                        <p>Complete home and office renovations with attention to detail and modern construction techniques. We breathe new life into existing spaces while maintaining structural integrity.</p>
+                        <ul class="service-features">
+                            <li>Kitchen and bathroom renovations</li>
+                            <li>Flooring and wall treatments</li>
+                            <li>Electrical and plumbing updates</li>
+                            <li>Structural modifications</li>
+                        </ul>
+                        <button class="btn btn-primary" onclick="openQuoteForm()">Get Quote</button>
+                        <button class="btn btn-secondary learn-more" data-service="renovation">Learn More</button>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Architecture">
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-drafting-compass"></i>
+                        </div>
+                        <h3>Architecture</h3>
+                        <p>Professional architectural services from concept to completion. Our licensed architects ensure structural integrity, aesthetic appeal, and compliance with building codes.</p>
+                        <ul class="service-features">
+                            <li>Residential and commercial design</li>
+                            <li>Building permits and approvals</li>
+                            <li>Structural engineering</li>
+                            <li>Site planning and development</li>
+                        </ul>
+                        <button class="btn btn-primary" onclick="openQuoteForm()">Get Quote</button>
+                        <button class="btn btn-secondary learn-more" data-service="architecture">Learn More</button>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Construction">
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-hard-hat"></i>
+                        </div>
+                        <h3>Construction</h3>
+                        <p>Full-scale construction projects with experienced teams and premium materials. We handle everything from foundation to finishing touches with precision and quality.</p>
+                        <ul class="service-features">
+                            <li>New home construction</li>
+                            <li>Commercial buildings</li>
+                            <li>Additions and extensions</li>
+                            <li>Project management</li>
+                        </ul>
+                        <button class="btn btn-primary" onclick="openQuoteForm()">Get Quote</button>
+                        <button class="btn btn-secondary learn-more" data-service="construction">Learn More</button>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2032&q=80" alt="3D Visualization">
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-cube"></i>
+                        </div>
+                        <h3>3D Visualization</h3>
+                        <p>Bring your project to life with our advanced 3D visualization services. See your space before construction begins with photorealistic renderings and virtual walkthroughs.</p>
+                        <ul class="service-features">
+                            <li>3D modeling and rendering</li>
+                            <li>Virtual reality walkthroughs</li>
+                            <li>Material and lighting simulation</li>
+                            <li>Interactive design presentations</li>
+                        </ul>
+                        <button class="btn btn-primary" onclick="openQuoteForm()">Get Quote</button>
+                        <button class="btn btn-secondary learn-more" data-service="3d-visualization">Learn More</button>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2076&q=80" alt="Project Management">
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <h3>Project Management</h3>
+                        <p>Comprehensive project management services to ensure your construction project runs smoothly, on time, and within budget. We coordinate all aspects of your project.</p>
+                        <ul class="service-features">
+                            <li>Timeline and budget management</li>
+                            <li>Vendor and contractor coordination</li>
+                            <li>Quality control and inspections</li>
+                            <li>Progress reporting and updates</li>
+                        </ul>
+                        <button class="btn btn-primary" onclick="openQuoteForm()">Get Quote</button>
+                        <button class="btn btn-secondary learn-more" data-service="project-management">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <h2 class="section-title">Our Process</h2>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Consultation</h3>
+                        <p>We start with a detailed consultation to understand your vision, requirements, and budget.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Design & Planning</h3>
+                        <p>Our team creates detailed designs and plans, including 3D visualizations for your approval.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Construction</h3>
+                        <p>We execute the project with skilled craftsmen, quality materials, and regular progress updates.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Completion</h3>
+                        <p>Final inspections, cleanup, and handover of your completed project with warranty coverage.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Start Your Project?</h2>
+                <p>Contact us today for a free consultation and let's bring your vision to life.</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary" onclick="openQuoteForm()">Get Free Quote</button>
+                    <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Engineer's & Builder's</h3>
+                    <p>Transforming spaces and building dreams with exceptional design and construction services.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Business Hours</h4>
+                    <ul>
+                        <li>Monday - Friday: 9:00 AM - 6:00 PM</li>
+                        <li>Saturday: 10:00 AM - 4:00 PM</li>
+                        <li>Sunday: Closed</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Engineer's & Builder's. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp/Call floating button -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/15551234567" class="floating-btn whatsapp" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+15551234567" class="floating-btn call">
+            <i class="fas fa-phone"></i>
+        </a>
+        <a href="https://instagram.com/your_instagram" class="floating-btn instagram" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+    </div>
+
+    <!-- Service Detail Modal -->
+    <div id="serviceModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeServiceModal()">&times;</span>
+            <div id="serviceModalContent">
+                <!-- Content will be loaded dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="services.js"></script>
+</body>
+</html>

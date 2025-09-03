@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interior & Construction - Transforming Spaces, Building Dreams</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Enginner's & Builder's</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero animate-on-scroll">
+        <div class="hero-video-container">
+            <video class="hero-video" autoplay muted loop playsinline>
+                <source src="hero.mp4" type="video/mp4">
+                <!-- Fallback image if video doesn't load -->
+                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2016&q=80" alt="Construction Background">
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title" style="color: bisque;">Transforming Spaces, Building Dreams</h1>
+            <p class="hero-subtitle" style="color: bisque;">We create exceptional interior designs and construction solutions that bring your vision to life with unmatched quality and craftsmanship.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="openQuoteForm()">Get a Quote</button>
+                <a href="projects.html" class="btn btn-secondary">View Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Services -->
+    <section id="services" class="services animate-on-scroll">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Interior Design</h3>
+                    <p>Transform your space with our innovative interior design solutions tailored to your lifestyle and preferences.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hammer"></i>
+                    </div>
+                    <h3>Renovation</h3>
+                    <p>Complete home and office renovations with attention to detail and modern construction techniques.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-drafting-compass"></i>
+                    </div>
+                    <h3>Architecture</h3>
+                    <p>Professional architectural services from concept to completion, ensuring structural integrity and aesthetic appeal.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <h3>Construction</h3>
+                    <p>Full-scale construction projects with experienced teams and premium materials for lasting results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about animate-on-scroll">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Our Company</h2>
+                    <p>Engineers & Builders is a Greater Noida–based construction
+company founded by experienced engineers with 10+ years
+of expertise in industrial, civil, and interior works. Though a
+new venture, our team has already delivered many projects
+across India, especially for leading Korean multinational
+clients.
+We bring together precision, innovation, and global
+standards, blending Korean quality benchmarks with Indian
+execution strength. With a strong professional team and
+proven capability, we aim to deliver turnkey industrial
+solutions that ensure speed, quality, and client satisfaction
+every time.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h3>10+</h3>
+                        <p>Years of Experience</p>
+                    </div>
+                    <div class="stat">
+                        <h3>100+</h3>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="stat">
+                        <h3>50+</h3>
+                        <p>Happy Clients</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us animate-on-scroll">
+        <div class="container">
+            <h2 class="section-title">Why Choose Us</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Experienced Team</h3>
+                    <p>Delivered complex industrial, civil, and
+                interior projects across India</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Quality Materials</h3>
+                    <p>Projects completed on schedule with
+zero compromise on standards</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Creative Designs</h3>
+                    <p>From structural works to interiors, we
+manage end-to-end delivery</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>On-time Delivery</h3>
+                    <p>Skilled Workforce with 25+ trained engineers & site
+professionals under one roof</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Nationwide Reach</h3>
+                    <p>Execution capability from Sri City to
+Pune.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Trusted by Clients</h3>
+                    <p>Strong record of repeat collaborations
+with leading MNCs.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Direct Coordination</h3>
+                    <p>Owner-led communication ensures
+smooth execution and control</p>
+                </div>
+                
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Transparent Pricing</h3>
+                    <p>No hidden costs, clear quotations, and flexible packages.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Showcase -->
+    <section id="projects" class="projects animate-on-scroll">
+        <div class="container">
+            <h2 class="section-title">Our Projects</h2>
+            
+            <!-- Project Ticker -->
+            <div class="project-ticker">
+                <div class="ticker-content">
+                    <image src="ticker/1.jpg"></image>
+                    <image src="ticker/2.png"></image>
+                    <image src="ticker/3.png"></image>
+                    <image src="ticker/4.png"></image>
+                    <image src="ticker/5.png"></image>
+                    <image src="ticker/6.png"></image>
+                    <image src="ticker/7.png"></image>
+                    <image src="ticker/8.png"></image>
+                    <image src="ticker/9.png"></image>
+                    <image src="ticker/10.png"></image>
+                    <image src="ticker/11.png"></image>
+                    <image src="ticker/12.png"></image>
+                </div>
+            </div>
+
+            <!-- Featured Project Video -->
+            <div class="featured-project">
+                <div class="project-video-container">
+                    <video id="projectVideo" autoplay muted loop playsinline>
+                        <source src="project.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="video-overlay">
+                        <div class="video-info">
+                            <h3>Featured Project Showcase</h3>
+                            <p>Experience our latest construction and design work</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Stats -->
+            <div class="project-stats">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="150">0</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="10">0</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="50">0</div>
+                    <div class="stat-label">Happy Clients</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="25">0</div>
+                    <div class="stat-label">Team Members</div>
+                </div>
+            </div>
+
+            <div class="projects-button">
+                <a href="projects.html" class="btn btn-primary">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Cost Estimator -->
+    <section class="cost-estimator animate-on-scroll">
+        <div class="container">
+            <h2 class="section-title">Project Cost Estimator</h2>
+            <p class="section-subtitle">Get an instant estimate for your project in Indian Rupees</p>
+            <div class="estimator-content">
+                <div class="estimator-form">
+                    <form id="costEstimatorForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="projectType">Project Type</label>
+                                <select id="projectType" name="projectType" required>
+                                    <option value="">Select Project Type</option>
+                                    <option value="interior-design">Interior Design</option>
+                                    <option value="renovation">Renovation</option>
+                                    <option value="construction">New Construction</option>
+                                    <option value="commercial">Commercial Space</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="propertySize">Property Size (sq ft)</label>
+                                <input type="number" id="propertySize" name="propertySize" placeholder="e.g., 1200" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="roomCount">Number of Rooms</label>
+                                <select id="roomCount" name="roomCount" required>
+                                    <option value="">Select Rooms</option>
+                                    <option value="1">1 Room</option>
+                                    <option value="2">2 Rooms</option>
+                                    <option value="3">3 Rooms</option>
+                                    <option value="4">4 Rooms</option>
+                                    <option value="5">5+ Rooms</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="qualityLevel">Quality Level</label>
+                                <select id="qualityLevel" name="qualityLevel" required>
+                                    <option value="">Select Quality</option>
+                                    <option value="basic">Basic (₹800-1200/sq ft)</option>
+                                    <option value="standard">Standard (₹1200-1800/sq ft)</option>
+                                    <option value="premium">Premium (₹1800-2500/sq ft)</option>
+                                    <option value="luxury">Luxury (₹2500+/sq ft)</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="additionalServices">Additional Services</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="additionalServices" value="furniture">
+                                    <span>Furniture & Fixtures</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="additionalServices" value="lighting">
+                                    <span>Lighting Design</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="additionalServices" value="landscaping">
+                                    <span>Landscaping</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="additionalServices" value="smart-home">
+                                    <span>Smart Home Setup</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Calculate Estimate</button>
+                    </form>
+                </div>
+                
+                <div class="estimate-result" id="estimateResult" style="display: none;">
+                    <div class="result-card">
+                        <h3><i class="fas fa-calculator"></i> Your Project Estimate</h3>
+                        <div class="estimate-details">
+                            <div class="estimate-item">
+                                <span class="label">Base Cost:</span>
+                                <span class="value" id="baseCost">₹0</span>
+                            </div>
+                            <div class="estimate-item">
+                                <span class="label">Additional Services:</span>
+                                <span class="value" id="additionalCost">₹0</span>
+                            </div>
+                            <div class="estimate-item total">
+                                <span class="label">Total Estimated Cost:</span>
+                                <span class="value" id="totalCost">₹0</span>
+                            </div>
+                        </div>
+                        <div class="estimate-note">
+                            <p><i class="fas fa-info-circle"></i> This is an approximate estimate. Final cost may vary based on specific requirements and market conditions.</p>
+                        </div>
+                        <div class="estimate-actions">
+                            <button class="btn btn-secondary" onclick="resetEstimator()">Calculate Another</button>
+                            <button class="btn btn-primary" onclick="openQuoteForm()">Get Detailed Quote</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials animate-on-scroll">
+        <div class="container">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Exceptional work! The team transformed our home beyond our expectations. Professional, timely, and creative solutions."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Client">
+                        <div class="author-info">
+                            <h4>John Smith</h4>
+                            <p>Homeowner</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Outstanding service from start to finish. They delivered our office renovation on time and within budget. Highly recommended!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Client">
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>Business Owner</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Creative designs and excellent craftsmanship. They understood our vision and brought it to life beautifully."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Client">
+                        <div class="author-info">
+                            <h4>Michael Brown</h4>
+                            <p>Restaurant Owner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact animate-on-scroll">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Get In Touch</h2>
+                    <p>Ready to transform your space? Contact us today for a consultation.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>
+                                <li>+91-8588835444</li>
+                                <li>+91-9560847658</li>
+                                <li>+91-7007984931</li>
+                            </span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span><a href="mailto:engineersandbuilders01@gmail.com" style="text-decoration: none; color: white;">engineersandbuilders01@gmail.com</a></span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Supertech Czar Suits , Omicron 1 , Greater
+Noida, Uttar Pradesh (201310)</span>
+                        </div>
+                    </div>
+                    <div class="map-container">
+                       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.6698645423235!2d77.55614206194878!3d28.459366688324547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cc008138b8c1f%3A0x4228b499b9599967!2sFH56%2BQ85%20SUPERTECH%20CZAR%20SUITES%2C%20Omicron%20I%2C%20Greater%20Noida%2C%20Uttar%20Pradesh%20201310!5e0!3m2!1sen!2sin!4v1756916335807!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm" action="https://formspree.io/f/mqadgkwq" method="POST">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder="Your Phone">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Interior & Construction</h3>
+                    <p>Transforming spaces and building dreams with exceptional design and construction services.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Business Hours</h4>
+                    <ul>
+                        <li>Monday - Friday: 9:00 AM - 6:00 PM</li>
+                        <li>Saturday: 10:00 AM - 4:00 PM</li>
+                        <li>Sunday: Closed</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Interior & Construction. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Quote Form Popup -->
+    <div id="quoteModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeQuoteForm()">&times;</span>
+            <h2>Get a Quote</h2>
+            <form id="quoteForm" action="https://formspree.io/f/mblapjqr" method="POST">
+                <div class="form-group">
+                    <input type="text" id="quoteName" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="quotePhone" name="phone" placeholder="Your Phone" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="quoteEmail" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <select id="quoteService" name="service" required>
+                        <option value="">Select Service</option>
+                        <option value="interior-design">Interior Design</option>
+                        <option value="renovation">Renovation</option>
+                        <option value="architecture">Architecture</option>
+                        <option value="construction">Construction</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea id="quoteMessage" name="message" placeholder="Tell us about your project" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Quote Request</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- WhatsApp/Call/Instagram Floating Buttons -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/15551234567" class="floating-btn whatsapp" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+15551234567" class="floating-btn call">
+            <i class="fas fa-phone"></i>
+        </a>
+        <a href="https://instagram.com/your_instagram" class="floating-btn instagram" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
