@@ -13,16 +13,41 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <h2>Enginner's & Builder's</h2>
+                <a href="index.html">
+                    <img src="logo.png" alt="Company Logo" class="logo-img">
+                    <div class="logo-text">
+                        <span class="company-name">
+                            <span class="engineer-text">Engineer</span>
+                            <span class="ampersand">&</span>
+                            <span class="builder-text">Builder</span>
+                        </span>
+                        <span class="company-tagline">Building Beyond Standard</span>
+                    </div>
+                </a>
             </div>
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="team.html">Team</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+            <div class="nav-menu">
+                <div class="nav-menu-items">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="nav-contact-section">
+                    <div class="contact-content">
+                        <h3>Ready to Work With Us?</h3>
+                        <p>Let's bring your vision to life with our expert interior design and construction services.</p>
+                        <a href="contact.html" class="contact-btn">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-close" onclick="closeMobileMenu()">
+                <i class="fas fa-times"></i>
+            </div>
             <div class="hamburger">
                 <span></span>
                 <span></span>
@@ -33,20 +58,19 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero animate-on-scroll">
-        <div class="hero-video-container">
-            <video class="hero-video" autoplay muted loop playsinline>
-                <source src="hero (1).mp4" type="video/mp4">
-                <!-- Fallback image if video doesn't load -->
-                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2016&q=80" alt="Construction Background">
-            </video>
-            <div class="hero-overlay"></div>
+        <div class="hero-background">
+            <img src="hero3.jpg" alt="Modern Architecture">
         </div>
+        
         <div class="hero-content">
-            <h1 class="hero-title" style="color: bisque;">Transforming Spaces, Building Dreams</h1>
-            <p class="hero-subtitle" style="color: bisque;">We create exceptional interior designs and construction solutions that bring your vision to life with unmatched quality and craftsmanship.</p>
-            <div class="hero-buttons">
-                <button class="btn btn-primary" onclick="openQuoteForm()">Get a Quote</button>
-                <a href="projects.html" class="btn btn-secondary">View Projects</a>
+            <div class="hero-text-content">
+                <p class="hero-subtitle">From concept to completion, we transform your vision into reality</p>
+                <h1 class="hero-title">Crafting Excellence in Every Space</h1>
+                <p class="hero-description">Experience the perfect blend of creativity, quality, and craftsmanship that defines exceptional spaces with innovative interior design and precision construction.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="openQuoteForm()">Start Your Project</button>
+                    <a href="projects.html" class="btn btn-secondary">Explore Our Work</a>
+                </div>
             </div>
         </div>
     </section>
@@ -205,19 +229,86 @@ smooth execution and control</p>
         <div class="container">
             <h2 class="section-title">Our Projects</h2>
             
-
-
-            <!-- Featured Project Video -->
-            <div class="featured-project">
-                <div class="project-video-container">
-                    <video id="projectVideo" autoplay muted loop playsinline>
-                        <source src="project.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="video-overlay">
-                        <div class="video-info">
-                            <h3>Featured Project Showcase</h3>
-                            <p>Experience our latest construction and design work</p>
+            <!-- Project Slideshow -->
+            <div class="project-slideshow-section">
+                
+                <div class="project-slideshow-container">
+                    <div class="slideshow-wrapper">
+                        <div class="slideshow">
+                            <div class="slide active">
+                                <img src="proimage/1.jpg" alt="Project 1">
+                                <div class="slide-overlay">
+                                    <div class="slide-info">
+                                        <h4>Modern Living Room</h4>
+                                        <p>Contemporary design with premium finishes</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <img src="proimage/3.jpg" alt="Project 2">
+                                <div class="slide-overlay">
+                                    <div class="slide-info">
+                                        <h4>Luxury Kitchen</h4>
+                                        <p>High-end kitchen renovation project</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <img src="proimage/6.jpg" alt="Project 3">
+                                <div class="slide-overlay">
+                                    <div class="slide-info">
+                                        <h4>Master Bedroom</h4>
+                                        <p>Elegant bedroom design and construction</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <img src="proimage/7.jpg" alt="Project 4">
+                                <div class="slide-overlay">
+                                    <div class="slide-info">
+                                        <h4>Office Space</h4>
+                                        <p>Professional workspace design</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <img src="proimage/8.jpg" alt="Project 5">
+                                <div class="slide-overlay">
+                                    <div class="slide-info">
+                                        <h4>Bathroom Renovation</h4>
+                                        <p>Modern bathroom with premium fixtures</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <img src="proimage/9.jpg" alt="Project 6">
+                                <div class="slide-overlay">
+                                    <div class="slide-info">
+                                        <h4>Dining Area</h4>
+                                        <p>Sophisticated dining space design</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slideshow Controls -->
+                        <div class="slideshow-controls">
+                            <button class="prev-btn" onclick="changeSlide(-1)">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="next-btn" onclick="changeSlide(1)">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                        
+                        <!-- Slideshow Dots -->
+                        <div class="slideshow-dots">
+                            <span class="dot active" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                            <span class="dot" onclick="currentSlide(3)"></span>
+                            <span class="dot" onclick="currentSlide(4)"></span>
+                            <span class="dot" onclick="currentSlide(5)"></span>
+                            <span class="dot" onclick="currentSlide(6)"></span>
                         </div>
                     </div>
                 </div>
@@ -470,6 +561,7 @@ Noida, Uttar Pradesh (201310)</span>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="projects.html">Projects</a></li>
                         <li><a href="contact.html">Contact</a></li>
+                        <li><a href="careers.html">Careers</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -521,10 +613,10 @@ Noida, Uttar Pradesh (201310)</span>
 
     <!-- WhatsApp/Call/Instagram Floating Buttons -->
     <div class="floating-buttons">
-        <a href="https://wa.me/15551234567" class="floating-btn whatsapp" target="_blank">
+        <a href="https://wa.me/917007984931" class="floating-btn whatsapp" target="_blank">
             <i class="fab fa-whatsapp"></i>
         </a>
-        <a href="tel:+15551234567" class="floating-btn call">
+        <a href="tel:+917007984931" class="floating-btn call">
             <i class="fas fa-phone"></i>
         </a>
         <a href="https://instagram.com/your_instagram" class="floating-btn instagram" target="_blank">

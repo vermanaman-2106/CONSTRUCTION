@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initProjectVideo();
     initAnimatedStats();
     initScrollAnimations();
+    initSlideshow();
+    initHeroBackground();
 });
 
 // Navigation functionality
@@ -57,11 +59,11 @@ function initNavigation() {
         if (window.scrollY > 100) {
             navbar.style.background = 'rgba(28, 28, 28, 0.98)';
             navbar.style.boxShadow = '0 5px 25px rgba(0, 0, 0, 0.4)';
-            navbar.style.transform = 'translateX(-50%) scale(0.95)';
+            navbar.style.transform = 'scale(0.95)';
         } else {
             navbar.style.background = 'rgba(28, 28, 28, 0.95)';
             navbar.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.3)';
-            navbar.style.transform = 'translateX(-50%) scale(1)';
+            navbar.style.transform = 'scale(1)';
         }
     });
 }
@@ -722,10 +724,96 @@ function initScrollAnimations() {
     });
 }
 
+// Slideshow functionality
+let currentSlideshowSlide = 0;
+let slideshowInterval;
+
+function initSlideshow() {
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.slideshow-dots .dot');
+    
+    if (slides.length === 0) return;
+    
+    // Auto-advance slideshow
+    slideshowInterval = setInterval(() => {
+        nextSlide();
+    }, 5000);
+    
+    // Initialize first slide
+    showSlideshowSlide(0);
+    
+    // Pause slideshow on hover
+    const slideshowContainer = document.querySelector('.project-slideshow-container');
+    if (slideshowContainer) {
+        slideshowContainer.addEventListener('mouseenter', () => {
+            clearInterval(slideshowInterval);
+        });
+        
+        slideshowContainer.addEventListener('mouseleave', () => {
+            slideshowInterval = setInterval(() => {
+                nextSlide();
+            }, 5000);
+        });
+    }
+}
+
+function nextSlide() {
+    const slides = document.querySelectorAll('.slide');
+    currentSlideshowSlide = (currentSlideshowSlide + 1) % slides.length;
+    showSlideshowSlide(currentSlideshowSlide);
+}
+
+function prevSlide() {
+    const slides = document.querySelectorAll('.slide');
+    currentSlideshowSlide = (currentSlideshowSlide - 1 + slides.length) % slides.length;
+    showSlideshowSlide(currentSlideshowSlide);
+}
+
+function showSlideshowSlide(index) {
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.slideshow-dots .dot');
+    
+    // Hide all slides
+    slides.forEach(slide => slide.classList.remove('active'));
+    
+    // Remove active class from all dots
+    dots.forEach(dot => dot.classList.remove('active'));
+    
+    // Show current slide
+    if (slides[index]) {
+        slides[index].classList.add('active');
+    }
+    
+    // Activate current dot
+    if (dots[index]) {
+        dots[index].classList.add('active');
+    }
+    
+    currentSlideshowSlide = index;
+}
+
+// Global functions for slideshow controls
+window.changeSlide = function(direction) {
+    if (direction === 1) {
+        nextSlide();
+    } else if (direction === -1) {
+        prevSlide();
+    }
+};
+
+window.currentSlide = function(slideIndex) {
+    showSlideshowSlide(slideIndex - 1); // Convert to 0-based index
+};
+
+// Hero background functionality - static image
+function initHeroBackground() {
+    // Static background image - no slideshow needed
+    console.log('Hero background initialized with static image');
+}
+
 // Export functions for global access
 window.openQuoteForm = openQuoteForm;
 window.closeQuoteForm = closeQuoteForm;
-window.changeSlide = changeSlide;
 window.resetEstimator = resetEstimator;
 window.scrollToSection = function(sectionId) {
     const section = document.getElementById(sectionId);

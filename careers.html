@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers - Engineer's & Builder's</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="Company Logo" class="logo-img">
+                    <div class="logo-text">
+                        <span class="company-name">
+                            <span class="engineer-text">Engineer</span>
+                            <span class="ampersand">&</span>
+                            <span class="builder-text">Builder</span>
+                        </span>
+                        <span class="company-tagline">Building Beyond Standard</span>
+                    </div>
+                </a>
+            </div>
+            <div class="nav-menu">
+                <div class="nav-menu-items">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="careers.html" class="active">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="nav-contact-section">
+                    <div class="contact-content">
+                        <h3>Ready to Work With Us?</h3>
+                        <p>Let's bring your vision to life with our expert interior design and construction services.</p>
+                        <a href="contact.html" class="contact-btn">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-close" onclick="closeMobileMenu()">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Careers</h1>
+            <p>Join our team and build the future</p>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="careers-hero animate-on-scroll">
+        <div class="careers-hero-background">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2076&q=80" alt="Construction Team">
+        </div>
+        <div class="careers-hero-content">
+            <div class="careers-hero-text">
+                <h1 class="careers-hero-title">Join Our Team</h1>
+                <p class="careers-hero-subtitle">Be part of a dynamic construction & design company shaping the future of spaces.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Work With Us Section -->
+    <section class="why-work-with-us animate-on-scroll">
+        <div class="container">
+            <h2 class="section-title">Why Work With Us</h2>
+            <p class="section-description">At Engineer's & Builder's, we believe in creativity, innovation, and teamwork. We provide our employees with a platform to grow and make an impact in the construction and interior design industry.</p>
+        </div>
+    </section>
+
+    <!-- Open Positions Section -->
+    <section class="open-positions animate-on-scroll">
+        <div class="container">
+            <h2 class="section-title">Current Openings</h2>
+            <div class="jobs-grid">
+                <div class="job-card">
+                    <div class="job-header">
+                        <h3 class="job-title">Site Engineer</h3>
+                        <span class="job-location">Jaipur</span>
+                    </div>
+                    <p class="job-description">Oversee on-site construction activities, ensure quality standards, and coordinate with project teams to deliver exceptional results.</p>
+                    <button class="btn btn-primary apply-btn" onclick="scrollToForm()">Apply Now</button>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-header">
+                        <h3 class="job-title">Interior Designer</h3>
+                        <span class="job-location">Remote</span>
+                    </div>
+                    <p class="job-description">Create innovative design concepts for client projects, develop space planning solutions, and collaborate with construction teams.</p>
+                    <button class="btn btn-primary apply-btn" onclick="scrollToForm()">Apply Now</button>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-header">
+                        <h3 class="job-title">Project Manager</h3>
+                        <span class="job-location">Jaipur</span>
+                    </div>
+                    <p class="job-description">Lead construction projects from conception to completion, manage client communication, and ensure timely project delivery.</p>
+                    <button class="btn btn-primary apply-btn" onclick="scrollToForm()">Apply Now</button>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-header">
+                        <h3 class="job-title">Construction Supervisor</h3>
+                        <span class="job-location">Jaipur</span>
+                    </div>
+                    <p class="job-description">Supervise construction activities, manage on-site teams, and ensure adherence to safety protocols and quality standards.</p>
+                    <button class="btn btn-primary apply-btn" onclick="scrollToForm()">Apply Now</button>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-header">
+                        <h3 class="job-title">CAD Designer</h3>
+                        <span class="job-location">Remote</span>
+                    </div>
+                    <p class="job-description">Create detailed technical drawings and 3D models for construction projects using AutoCAD and other design software.</p>
+                    <button class="btn btn-primary apply-btn" onclick="scrollToForm()">Apply Now</button>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-header">
+                        <h3 class="job-title">Quality Control Inspector</h3>
+                        <span class="job-location">Jaipur</span>
+                    </div>
+                    <p class="job-description">Inspect construction work, ensure compliance with building codes, and maintain quality standards throughout projects.</p>
+                    <button class="btn btn-primary apply-btn" onclick="scrollToForm()">Apply Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Life at Company Section -->
+    <section class="life-at-company animate-on-scroll">
+        <div class="container">
+            <h2 class="section-title">Life at Engineer's & Builder's</h2>
+            <div class="life-grid">
+                <div class="life-item">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Teamwork">
+                    <h3>Teamwork</h3>
+                </div>
+                <div class="life-item">
+                    <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Innovation">
+                    <h3>Innovation</h3>
+                </div>
+                <div class="life-item">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Growth">
+                    <h3>Growth</h3>
+                </div>
+                <div class="life-item">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Integrity">
+                    <h3>Integrity</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Form Section -->
+    <section id="application-form" class="application-form animate-on-scroll">
+        <div class="container">
+            <h2 class="section-title">Apply Now</h2>
+            <div class="form-container">
+                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="career-form">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="position">Position Applying For *</label>
+                        <select id="position" name="position" required>
+                            <option value="">Select a position</option>
+                            <option value="Site Engineer">Site Engineer</option>
+                            <option value="Interior Designer">Interior Designer</option>
+                            <option value="Project Manager">Project Manager</option>
+                            <option value="Construction Supervisor">Construction Supervisor</option>
+                            <option value="CAD Designer">CAD Designer</option>
+                            <option value="Quality Control Inspector">Quality Control Inspector</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Tell us about yourself and why you want to join our team *</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Share your experience, skills, and motivation..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary submit-btn">Submit Application</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Engineer's & Builder's</h3>
+                    <p>Building Beyond Standard</p>
+                    <p>Creating exceptional spaces through innovative design and precision construction.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Jaipur, Rajasthan</p>
+                    <p><i class="fas fa-phone"></i> +91 9876543210</p>
+                    <p><i class="fas fa-envelope"></i> info@engineersbuilders.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Engineer's & Builder's. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fixed Contact Icons -->
+    <div class="fixed-contact">
+        <a href="https://wa.me/917007984931" class="contact-icon whatsapp" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+917007984931" class="contact-icon phone">
+            <i class="fas fa-phone"></i>
+        </a>
+        <a href="https://instagram.com/engineersbuilders" class="contact-icon instagram" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        function scrollToForm() {
+            document.getElementById('application-form').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>
