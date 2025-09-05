@@ -189,7 +189,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     position: relative;
     z-index: 1000;
-    gap: 2vw;
+    gap: .5vw;
 }
 
 .nav-logo a {
@@ -307,7 +307,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav-menu-items ul {
     display: flex;
     list-style: none;
-    gap: 2.5vw;
+    gap: 1.2vw;
     align-items: center;
     margin: 0;
     padding: 0;
