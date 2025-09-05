@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initSmoothScroll();
     initSlideshow();
     initHeroBackground();
+    initInstagramVideos();
 });
 
 // Navigation functionality
@@ -883,6 +884,50 @@ window.currentSlide = function(slideIndex) {
 function initHeroBackground() {
     // Static background image - no slideshow needed
     console.log('Hero background initialized with static image');
+}
+
+// Instagram Videos functionality
+function initInstagramVideos() {
+    const instagramVideos = document.querySelectorAll('.instagram-video video');
+    
+    // Pause videos when they're not visible (performance optimization)
+    const videoObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            const video = entry.target;
+            if (entry.isIntersecting) {
+                video.play().catch(e => {
+                    // Autoplay might be blocked, that's okay
+                    console.log('Video autoplay blocked:', e);
+                });
+            } else {
+                video.pause();
+            }
+        });
+    }, { threshold: 0.5 });
+
+    instagramVideos.forEach(video => {
+        videoObserver.observe(video);
+        
+        // Handle video loading errors
+        video.addEventListener('error', function() {
+            console.log('Instagram video failed to load:', video.src);
+            // You could add a fallback image here
+        });
+        
+        // Handle video loading success
+        video.addEventListener('loadeddata', function() {
+            console.log('Instagram video loaded successfully');
+        });
+    });
+
+    // Add click functionality to open Instagram
+    const instagramVideosContainers = document.querySelectorAll('.instagram-video');
+    instagramVideosContainers.forEach(container => {
+        container.addEventListener('click', function() {
+            // Open Instagram profile in new tab
+            window.open('https://instagram.com/your_instagram', '_blank');
+        });
+    });
 }
 
 // Export functions for global access
