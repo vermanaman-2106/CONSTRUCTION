@@ -11,6 +11,9 @@ document.addEventListener('DOMContentLoaded', function() {
     initProjectVideo();
     initAnimatedStats();
     initScrollAnimations();
+    initScrollProgress();
+    initParallaxEffects();
+    initSmoothScroll();
     initSlideshow();
     initHeroBackground();
 });
@@ -673,7 +676,7 @@ function initAnimatedStats() {
     }
 }
 
-// Scroll Animations functionality
+// Enhanced Scroll Animations functionality
 function initScrollAnimations() {
     const observerOptions = {
         threshold: 0.1,
@@ -711,6 +714,24 @@ function initScrollAnimations() {
         });
     }, observerOptions);
 
+    // Enhanced observer for new animation classes
+    const enhancedObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+                
+                // Handle stagger animations
+                if (entry.target.classList.contains('stagger-animation')) {
+                    const siblings = Array.from(entry.target.parentNode.children);
+                    const index = siblings.indexOf(entry.target);
+                    setTimeout(() => {
+                        entry.target.classList.add('animate');
+                    }, index * 100);
+                }
+            }
+        });
+    }, observerOptions);
+
     // Observe all sections with animate-on-scroll class
     const sections = document.querySelectorAll('.animate-on-scroll');
     sections.forEach(section => {
@@ -721,6 +742,59 @@ function initScrollAnimations() {
     const cards = document.querySelectorAll('.service-card, .feature-card, .testimonial-card, .stat-item');
     cards.forEach(card => {
         observer.observe(card);
+    });
+
+    // Observe new animation classes
+    const newAnimationElements = document.querySelectorAll('.scroll-fade-in, .scroll-slide-left, .scroll-slide-right, .scroll-scale-up, .scroll-rotate, .stagger-animation');
+    newAnimationElements.forEach(element => {
+        enhancedObserver.observe(element);
+    });
+}
+
+// Scroll Progress Indicator
+function initScrollProgress() {
+    const progressBar = document.querySelector('.scroll-progress');
+    if (!progressBar) return;
+
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.pageYOffset;
+        const docHeight = document.body.scrollHeight - window.innerHeight;
+        const scrollPercent = (scrollTop / docHeight) * 100;
+        progressBar.style.width = scrollPercent + '%';
+    });
+}
+
+// Parallax Effects
+function initParallaxEffects() {
+    const parallaxElements = document.querySelectorAll('.parallax-element');
+    
+    if (parallaxElements.length === 0) return;
+
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const rate = scrolled * -0.5;
+        
+        parallaxElements.forEach(element => {
+            element.style.transform = `translateY(${rate}px)`;
+        });
+    });
+}
+
+// Smooth scroll enhancement
+function initSmoothScroll() {
+    // Enhanced smooth scrolling for all internal links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                const offsetTop = target.offsetTop - 80;
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
     });
 }
 
