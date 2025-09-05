@@ -1593,12 +1593,13 @@ h1, h2, h3, h4, h5, h6 {
     align-items: start;
     max-width: 1200px;
     margin: 0 auto;
+    overflow: visible;
 }
 
 .contact-info h2 {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
-    color: #D4AF37;
+    color: #D97742;
 }
 
 .contact-info p {
@@ -1673,8 +1674,33 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(158, 111, 76, 0.2);
     height: fit-content;
+    position: -webkit-sticky;
     position: sticky;
-    top: 100px;
+    top: 20px;
+    transition: all 0.3s ease;
+    z-index: 10;
+    align-self: start;
+}
+
+/* Enhanced sticky form effect */
+.contact-form.sticky-active {
+    background: linear-gradient(135deg, #2A2A2A, #3A3A3A);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    border-color: rgba(212, 175, 55, 0.4);
+    transform: scale(1.02);
+    border: 3px solid #9E6F4C !important;
+}
+
+.contact-form.sticky-active::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.05), transparent);
+    border-radius: 15px;
+    pointer-events: none;
 }
 
 .contact-form h3 {
@@ -2634,8 +2660,11 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .contact-form {
-        position: static;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 20px;
         margin-top: 2vh;
+        align-self: start;
     }
 
     .contact-info {
@@ -2653,6 +2682,22 @@ h1, h2, h3, h4, h5, h6 {
         margin-bottom: 1.5vh;
         text-align: center;
         width: 100%;
+    }
+
+    /* Mobile sticky form adjustments - only for very small screens */
+    @media (max-width: 480px) {
+        .contact-form {
+            position: relative;
+            top: auto;
+            margin-top: 2rem;
+        }
+    }
+
+    .contact-form.sticky-active {
+        transform: none;
+        background: #2A2A2A;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        border-color: rgba(158, 111, 76, 0.2);
     }
 
     .contact-info p {
@@ -2786,6 +2831,10 @@ h1, h2, h3, h4, h5, h6 {
         border: 0.1vh solid rgba(158, 111, 76, 0.3);
         width: 100%;
         max-width: 90vw;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 20px;
+        align-self: start;
     }
 
     /* Contact Inspiration Mobile */
@@ -3043,6 +3092,10 @@ h1, h2, h3, h4, h5, h6 {
     .contact-form {
         padding: 2vh 1.5vw;
         max-width: 95vw;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 20px;
+        align-self: start;
     }
 
     /* Careers Mobile Small */

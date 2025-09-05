@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initSlideshow();
     initHeroBackground();
     initInstagramVideos();
+    initStickyForm();
 });
 
 // Navigation functionality
@@ -944,3 +945,34 @@ window.scrollToSection = function(sectionId) {
         });
     }
 };
+
+// Sticky Form Animation
+function initStickyForm() {
+    const contactForm = document.querySelector('.contact-form');
+    const contactSection = document.querySelector('.contact');
+    
+    if (!contactForm || !contactSection) {
+        console.log('Contact form or section not found');
+        return;
+    }
+
+    console.log('Sticky form initialized - using CSS-only sticky positioning');
+
+    // Use Intersection Observer for better performance
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                contactForm.classList.add('sticky-active');
+                console.log('Form is in view - added sticky-active class');
+            } else {
+                contactForm.classList.remove('sticky-active');
+                console.log('Form is out of view - removed sticky-active class');
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '-100px 0px -100px 0px'
+    });
+
+    observer.observe(contactSection);
+}
